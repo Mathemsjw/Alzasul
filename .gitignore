@@ -1,10 +1,209 @@
-.DS_Store
-applet
-application.linux-arm64
-application.linux-armv6hf
-application.linux32
-application.linux64
-application.windows32
-application.windows64
-application.macosx
-out
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alzasul - Roupas para aventura com estilo, resistência e conforto." />
+  <title>Alzasul | Roupas para Aventura</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f4f4;
+      color:#222;
+      line-height:1.6;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#0a1f33;
+      color:white;
+      z-index:1000;
+    }
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 10%;
+    }
+
+    .logo{
+      font-size:2rem;
+      font-weight:bold;
+      color:#4da6ff;
+    }
+
+    .menu{
+      display:flex;
+      gap:25px;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+    }
+
+    .hero{
+      height:100vh;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#4da6ff;
+      color:white;
+      padding:15px 35px;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:2.5rem;
+      color:#0a1f33;
+    }
+
+    .produtos-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:25px;
+    }
+
+    .produto{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .produto img{
+      width:100%;
+    }
+
+    .produto-info{
+      padding:20px;
+    }
+
+    footer{
+      background:#06121f;
+      color:white;
+      text-align:center;
+      padding:30px;
+    }
+
+    @media(max-width:768px){
+      .navbar{
+        flex-direction:column;
+      }
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">ALZASUL</div>
+
+    <div class="menu">
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Explore Sem Limites</h1>
+    <p>Roupas robustas para aventura.</p>
+    <a href="#produtos" class="btn">Ver Coleção</a>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2 class="section-title">Sobre a Alzasul</h2>
+  <p>
+    A Alzasul desenvolve roupas resistentes e modernas para aventureiros.
+  </p>
+</section>
+
+<section id="produtos">
+  <h2 class="section-title">Produtos</h2>
+
+  <div class="produtos-grid">
+
+    <div class="produto">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+      <div class="produto-info">
+        <h3>Jaqueta Explorer</h3>
+        <p>Ideal para aventuras extremas.</p>
+        <strong>R$ 349,90</strong>
+      </div>
+    </div>
+
+    <div class="produto">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+      <div class="produto-info">
+        <h3>Calça Trekking</h3>
+        <p>Conforto para trilhas.</p>
+        <strong>R$ 229,90</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contato">
+  <h2 class="section-title">Contato</h2>
+
+  <form>
+    <input type="text" placeholder="Seu nome"><br><br>
+    <input type="email" placeholder="Seu e-mail"><br><br>
+    <textarea placeholder="Mensagem"></textarea><br><br>
+    <button class="btn">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Alzasul - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
